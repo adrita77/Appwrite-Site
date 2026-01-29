@@ -1,21 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Appwrite Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Adrita • Appwrite Sites Demo</title>
+  <meta name="description" content="One-page Appwrite Sites demo with a Why Appwrite section." />
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --card:#121622;
+      --text:#e9eefc;
+      --muted:#a9b3cc;
+      --accent:#ff4d7d;
+      --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(900px 500px at 20% 10%, rgba(255,77,125,.20), transparent 60%),
+                  radial-gradient(900px 500px at 80% 20%, rgba(120,120,255,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .wrap{max-width:920px; margin:0 auto; padding:48px 18px 72px;}
+    .badge{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:8px 12px; border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:999px; color:var(--muted); font-size:14px;
+    }
+    .dot{width:8px;height:8px;border-radius:999px;background:var(--accent); box-shadow:0 0 0 4px rgba(255,77,125,.18)}
+    h1{font-size:44px; line-height:1.15; margin:18px 0 10px;}
+    p{margin:0 0 14px; color:var(--muted); font-size:16px;}
+    .grid{display:grid; grid-template-columns: 1.15fr .85fr; gap:16px; margin-top:22px;}
+    .card{
+      background:rgba(18,22,34,.75);
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px 18px;
+      backdrop-filter: blur(6px);
+    }
+    .title{display:flex; align-items:center; gap:10px; margin:0 0 10px;}
+    .title h2{margin:0; font-size:18px; color:var(--text);}
+    .title span{font-size:14px; color:var(--muted)}
+    .why p{color:var(--text); opacity:.92}
+    .links a{
+      display:block; padding:10px 12px; border-radius:12px;
+      border:1px solid var(--border); color:var(--text); text-decoration:none;
+      background:rgba(255,255,255,.03);
+      margin-bottom:10px;
+    }
+    .links a:hover{border-color:rgba(255,77,125,.45)}
+    footer{margin-top:26px; color:var(--muted); font-size:13px}
+    @media (max-width: 820px){
+      h1{font-size:34px}
+      .grid{grid-template-columns: 1fr}
+    }
+  </style>
 </head>
 <body>
+  <main class="wrap">
+    <div class="badge"><span class="dot"></span> Appwrite Sites • One-page Demo</div>
 
-<h1>Hello 👋 I'm Adrita</h1>
+    <h1>Hello 👋 I’m Adrita</h1>
+    <p>
+      Technical writer focused on developer experience — docs, tutorials, and product content that reduce friction and help developers ship faster.
+    </p>
 
-<p>This is my Appwrite demo site.</p>
+    <section class="grid">
+      <div class="card why">
+        <div class="title">
+          <h2>Why Appwrite</h2>
+          <span>(short)</span>
+        </div>
+        <p>
+          I like Appwrite because it makes backend building simple and developer-friendly—clean APIs, clear documentation, and an open-source ecosystem that helps teams move from idea to production faster with less setup and less friction.
+        </p>
+      </div>
 
-<h2>Why Appwrite</h2>
+      <div class="card links">
+        <div class="title">
+          <h2>Links</h2>
+          <span>(optional)</span>
+        </div>
+        <a href="https://github.com/adrita77/Appwrite-Site" target="_blank" rel="noreferrer">GitHub Repository</a>
+        <a href="https://miraiyo.com/" target="_blank" rel="noreferrer">Portfolio</a>
+        <a href="https://www.buddyboss.com/resources/docs/" target="_blank" rel="noreferrer">Docs Sample</a>
+      </div>
+    </section>
 
-<p>
-I like Appwrite because it makes backend development simple and developer-friendly.
-Its open-source ecosystem, clear documentation, and powerful APIs make it easy to build scalable applications faster.
-</p>
-
+    <footer>
+      Built as a lightweight demo for the Appwrite Developer Advocate application — minimal, readable, and documentation-first.
+    </footer>
+  </main>
 </body>
 </html>
+
 
